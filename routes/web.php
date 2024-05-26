@@ -1,6 +1,6 @@
 <?php
 
-use Illuminate\Support\Arr;
+use App\Models\Post;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -17,44 +17,12 @@ Route::get('/about', function () {
 Route::get('/posts', function () {
     return view('posts', [
         'title' => 'Blog',
-        'posts' => [
-            [
-                'id' => 1,
-                'slug' => 'article-title-1',
-                'title' => 'Article Title 1',
-                'author' => 'Arief Aryudi Syidik',
-                'body' => 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident, repudiandae! Alias odit exercitationem ratione tempora, veritatis eum repellendus maxime esse. Officiis cum quos eveniet quas suscipit explicabo saepe ipsa maiores!',
-            ],
-            [
-                'id' => 2,
-                'slug' => 'article-title-2',
-                'title' => 'Article Title 2',
-                'author' => 'Arief Aryudi Syidik',
-                'body' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus ex eos aut ipsum totam asperiores ab vel omnis explicabo rerum, inventore quo excepturi repellat fuga architecto, corrupti consequuntur perspiciatis. Sunt?',
-            ],
-        ],
+        'posts' => Post::all(),
     ]);
 });
 
 Route::get('/posts/{slug}', function ($slug) {
-    $posts = [
-        [
-            'id' => 1,
-            'slug' => 'article-title-1',
-            'title' => 'Article Title 1',
-            'author' => 'Arief Aryudi Syidik',
-            'body' => 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident, repudiandae! Alias odit exercitationem ratione tempora, veritatis eum repellendus maxime esse. Officiis cum quos eveniet quas suscipit explicabo saepe ipsa maiores!',
-        ],
-        [
-            'id' => 2,
-            'slug' => 'article-title-2',
-            'title' => 'Article Title 2',
-            'author' => 'Arief Aryudi Syidik',
-            'body' => 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus ex eos aut ipsum totam asperiores ab vel omnis explicabo rerum, inventore quo excepturi repellat fuga architecto, corrupti consequuntur perspiciatis. Sunt?',
-        ],
-    ];
-
-    $post = Arr::first($posts, fn($post) => $post['slug'] == $slug);
+    $post = Post::find($slug);
 
     return view('post', [
         'title' => 'Single Post',
