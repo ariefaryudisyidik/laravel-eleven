@@ -1,0 +1,26 @@
+<x-layout>
+    <x-slot:title>{{ $title }}</x-slot:title>
+    <article class="py-8 max-w-screen-md border-b border-gray-300">
+        <h2 class="mb-1 text-3xl tracking-tight font-bold text-gray-900">Article Title 1</h2>
+        <div class="text-base text-gray-500">
+            <a href="#">Arief Aryudi Syidik</a> | <time>May 26, 2024</time>
+        </div>
+        <p class="my-4 font-light">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Exercitationem vitae eveniet nulla dolorum ducimus
+            voluptate explicabo excepturi, maxime alias enim ipsam. Laboriosam, omnis. Ex, officia reiciendis. Quam illo
+            ea eaque?
+        </p>
+        <a href="#" class="font-medium text-blue-500 hover:underline">Read more &raquo;</a>
+    </article>
+    <article class="py-8 max-w-screen-md border-b border-gray-300">
+        <h2 class="mb-1 text-3xl tracking-tight font-bold text-gray-900">Article Title 2</h2>
+        <div class="text-base text-gray-500">
+            <a href="#">Arief Aryudi Syidik</a> | <time>May 26, 2024</time>
+        </div>
+        <p class="my-4 font-light">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis quis iste dolor debitis numquam corporis
+            quasi nihil harum eos, saepe, fugit velit adipisci vitae magnam nulla doloremque? Esse, mollitia atque.
+        </p>
+        <a href="#" class="font-medium text-blue-500 hover:underline">Read more &raquo;</a>
+    </article>
+</x-layout>
