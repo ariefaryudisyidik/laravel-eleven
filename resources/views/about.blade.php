@@ -11,7 +11,9 @@
 
 <body>
     <a href="/">Home</a>
+    <a href="/blog">Blog</a>
     <a href="/about">About</a>
+    <a href="/contact">Contact</a>
     <h1>About Laravel Page</h1>
     <h3>Owner: {{ $name }}</h3>
     <img src="/img/laravel.png" width="100" alt="Laravel">
