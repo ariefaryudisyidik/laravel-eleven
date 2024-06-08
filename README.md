@@ -12,3 +12,4 @@
 10. Model Factories
 11. Eloquent Relationship
 12. Post Category
+13. Database Seeder
