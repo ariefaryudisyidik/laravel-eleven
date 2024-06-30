@@ -19,7 +19,7 @@ Route::get('/about', function () {
 Route::get('/posts', function () {
     return view('posts', [
         'title' => 'Blog',
-        'posts' => Post::latest()->get(),
+        'posts' => Post::filter(request(['search', 'category', 'author']))->latest()->get(),
     ]);
 });
 
