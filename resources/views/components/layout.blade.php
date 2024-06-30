@@ -8,7 +8,7 @@
     <title>Home page</title>
     <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
     <script src="//unpkg.com/alpinejs" defer></script>
-    @vite('resources/css/app.css')
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
 <body class="h-full">
