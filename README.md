@@ -13,3 +13,6 @@
 11. Eloquent Relationship
 12. Post Category
 13. Database Seeder
+14. N + 1 Problem
+15. Redesign UI
+16. Searching
